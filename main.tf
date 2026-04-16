@@ -102,6 +102,7 @@ module "lb_controller_irsa" {
 
   role_name_prefix                            = "${local.cluster_name}-lbc-"
   attach_load_balancer_controller_policy      = true
+  load_balancer_controller_targetgroup_only   = false
 
   oidc_providers = {
     main = {
